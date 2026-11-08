@@ -32,6 +32,6 @@ function youtubeId(url){try{const u=new URL(url);let host=u.hostname.toLowerCase
 for(const [key,link] of Object.entries(SHRINE_VIDEOS)){if(link){document.getElementById('video-'+key).value=link;}}
 document.querySelectorAll('[data-video]').forEach(btn=>btn.addEventListener('click',()=>{const key=btn.dataset.video;const input=document.getElementById('video-'+key);const id=youtubeId(input.value.trim());const status=document.getElementById('status-'+key);const mount=document.getElementById('mount-'+key);if(!id){status.textContent='Please enter a valid YouTube video link.';return;}status.textContent='';mount.replaceChildren();const iframe=document.createElement('iframe');iframe.src='https://www.youtube-nocookie.com/embed/'+id;iframe.title=key+' mantra meditation';iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';iframe.allowFullscreen=true;iframe.referrerPolicy='strict-origin-when-cross-origin';iframe.loading='lazy';mount.append(iframe);}));
 </script></body><script>document.querySelector('[data-video="mahakali"]').click();</script>
+<img src="file_0000000064f4821080f95788ba666569.gif" alt="My picture">
 
-file_0000000064f4821080f95788ba666569.gif
 </html>
