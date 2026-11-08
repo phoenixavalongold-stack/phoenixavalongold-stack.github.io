@@ -31,4 +31,7 @@ const SHRINE_VIDEOS={lakshmi:'',mahakali:'https://youtube.com/shorts/0CSCv6KERYM
 function youtubeId(url){try{const u=new URL(url);let host=u.hostname.toLowerCase().replace(/^www\./,'');let id='';if(host==='youtu.be')id=u.pathname.slice(1).split('/')[0];else if(['youtube.com','m.youtube.com','music.youtube.com','youtube-nocookie.com'].includes(host)){if(u.pathname==='/watch')id=u.searchParams.get('v')||'';else if(/^\/(embed|shorts|live)\//.test(u.pathname))id=u.pathname.split('/')[2]||'';}return /^[a-zA-Z0-9_-]{11}$/.test(id)?id:null;}catch{return null;}}
 for(const [key,link] of Object.entries(SHRINE_VIDEOS)){if(link){document.getElementById('video-'+key).value=link;}}
 document.querySelectorAll('[data-video]').forEach(btn=>btn.addEventListener('click',()=>{const key=btn.dataset.video;const input=document.getElementById('video-'+key);const id=youtubeId(input.value.trim());const status=document.getElementById('status-'+key);const mount=document.getElementById('mount-'+key);if(!id){status.textContent='Please enter a valid YouTube video link.';return;}status.textContent='';mount.replaceChildren();const iframe=document.createElement('iframe');iframe.src='https://www.youtube-nocookie.com/embed/'+id;iframe.title=key+' mantra meditation';iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';iframe.allowFullscreen=true;iframe.referrerPolicy='strict-origin-when-cross-origin';iframe.loading='lazy';mount.append(iframe);}));
-</script></body><script>document.querySelector('[data-video="mahakali"]').click();</script></html>
+</script></body><script>document.querySelector('[data-video="mahakali"]').click();</script>
+
+file_0000000064f4821080f95788ba666569.gif
+</html>
