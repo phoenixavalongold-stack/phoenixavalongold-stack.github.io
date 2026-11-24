@@ -4,60 +4,401 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Phoenix Avalon Gold</title>
+
+<title>Phoenix Avalon Gold ✨</title>
 
 <style>
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   font-family: Georgia, serif;
-  color: #fff5dc;
+  color: #ffe8b5;
+  text-align: center;
+  overflow-x: hidden;
+
   background:
-    radial-gradient(ellipse, #34205f, #091735 75%);
+    linear-gradient(
+      rgba(15, 4, 32, 0.48),
+      rgba(15, 4, 32, 0.68)
+    ),
+    url("YOUR-LEOPARD-BACKGROUND.gif")
+    center center / cover fixed;
 }
 
-main {
-  padding: 30px;
+/* COSMIC CONTENT */
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: auto;
+  padding: 35px 18px 50px;
 }
 
 h1 {
-  color: #f8d982;
-  font-size: clamp(2rem, 8vw, 3.5rem);
-  text-shadow: 0 0 20px #b58aff;
+  color: #ffd76a;
+  font-size: clamp(2em, 8vw, 3em);
+  text-shadow:
+    0 0 10px #ffb6ff,
+    0 0 25px #b66aff,
+    0 0 40px #ffd76a;
+}
+
+h2 {
+  color: #ffe2a0;
+  text-shadow: 0 0 14px #d58cff;
+}
+
+h3 {
+  color: #ffd6f6;
 }
 
 p {
-  color: #65e8df;
-  letter-spacing: 2px;
-  line-height: 2;
+  line-height: 1.8;
 }
 
-.sparkle {
-  color: #f8d982;
-  font-size: 28px;
+/* COSMIC SHRINE PANEL */
+
+.shrine {
+  margin: 30px auto;
+  padding: 28px 18px;
+  background: rgba(25, 8, 48, 0.88);
+  border: 1px solid #e9bd66;
+  border-radius: 22px;
+  box-shadow:
+    0 0 15px #a65bca,
+    0 0 35px rgba(255, 182, 255, 0.3);
 }
+
+/* MAHAKALI IMAGE */
+
+.mahakali {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 22px auto;
+  border-radius: 16px;
+  border: 1px solid #e9bd66;
+  box-shadow:
+    0 0 20px #c17bff,
+    0 0 35px #ffb6ff;
+}
+
+/* BUTTONS */
+
+.link {
+  display: block;
+  max-width: 350px;
+  margin: 17px auto;
+  padding: 14px 12px;
+  border: 1px solid #e9bd66;
+  border-radius: 14px;
+  background: rgba(100, 48, 130, 0.5);
+  color: #ffe6a3;
+  font-size: 1.05em;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.link:hover {
+  background: rgba(180, 100, 200, 0.65);
+  box-shadow: 0 0 22px #ffb6ff;
+  color: white;
+  transform: scale(1.04);
+}
+
+/* WISE QR CODE */
+
+.qr {
+  width: 200px;
+  max-width: 80%;
+  height: auto;
+  margin: 15px auto;
+  border: 3px solid #e9bd66;
+  border-radius: 12px;
+  background: white;
+  padding: 5px;
+}
+
+/* GLITTER DECORATIONS */
+
+.sparkle {
+  font-size: 1.5em;
+  letter-spacing: 8px;
+  margin: 20px 0;
+  animation: shimmer 3s ease-in-out infinite alternate;
+}
+
+@keyframes shimmer {
+  from {
+    opacity: 0.65;
+    text-shadow: 0 0 5px #ffb6ff;
+  }
+  to {
+    opacity: 1;
+    text-shadow:
+      0 0 15px #ffd76a,
+      0 0 25px #ffb6ff;
+  }
+}
+
+/* FLOATING COSMIC SYMBOLS */
+
+.dancing-sparkles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.dancer {
+  position: absolute;
+  bottom: -70px;
+  color: #ffd76a;
+  font-size: 27px;
+  text-shadow:
+    0 0 8px #ffb6ff,
+    0 0 18px #bd75ff,
+    0 0 28px #ffd76a;
+  animation: cosmicDance 14s linear infinite;
+}
+
+.dancer:nth-child(1) {
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.dancer:nth-child(2) {
+  left: 20%;
+  animation-delay: 3s;
+  color: #ffb6f4;
+}
+
+.dancer:nth-child(3) {
+  left: 35%;
+  animation-delay: 6s;
+  font-size: 36px;
+}
+
+.dancer:nth-child(4) {
+  left: 50%;
+  animation-delay: 1s;
+  color: #fff1a8;
+}
+
+.dancer:nth-child(5) {
+  left: 65%;
+  animation-delay: 5s;
+  font-size: 32px;
+}
+
+.dancer:nth-child(6) {
+  left: 80%;
+  animation-delay: 2s;
+  color: #d9a4ff;
+}
+
+.dancer:nth-child(7) {
+  left: 95%;
+  animation-delay: 8s;
+}
+
+.dancer:nth-child(8) {
+  left: 45%;
+  animation-delay: 9s;
+  color: #ffb6f4;
+}
+
+@keyframes cosmicDance {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(.7);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  50% {
+    transform:
+      translateY(-55vh)
+      rotate(180deg)
+      scale(1.35);
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    transform:
+      translateY(-115vh)
+      rotate(360deg)
+      scale(.8);
+    opacity: 0;
+  }
+}
+
+/* FOOTER */
+
+footer {
+  padding: 20px;
+  color: #f4d5ff;
+  font-size: 0.9em;
+}
+
+/* MOBILE BACKGROUND */
+
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dancer,
+  .sparkle {
+    animation: none;
+  }
+
+  .link {
+    transition: none;
+  }
+}
+
 </style>
 </head>
 
 <body>
-<main>
-  <div class="sparkle">✧ ॐ ✧</div>
 
-  <h1>Phoenix Avalon Gold</h1>
+<!-- DANCING OM, GLITTER AND TRISHULS -->
 
-  <p>✨ WORK IN PROGRESS ✨</p>
+<div class="dancing-sparkles" aria-hidden="true">
+  <span class="dancer">ॐ</span>
+  <span class="dancer">✨</span>
+  <span class="dancer">🔱</span>
+  <span class="dancer">ॐ</span>
+  <span class="dancer">🌟</span>
+  <span class="dancer">ॐ</span>
+  <span class="dancer">✨</span>
+  <span class="dancer">🔱</span>
+</div>
+
+<div class="container">
+
+  <div class="sparkle">
+    ✨ ॐ 🔱 ॐ ✨
+  </div>
+
+  <h1>ॐ Phoenix Avalon Gold ॐ</h1>
+
+  <h2>Om Namah Shivaya</h2>
 
   <p>
-    Something beautiful is being created.
-    <br>
-    Please check back soon.
+    ✨bizarre self indulgence Art · Shamanic karaoke Music · eccentric Spirituality · Cosmic goddess Consciousness ✨
   </p>
 
-  <div class="sparkle">🔱 🌺 🔱</div>
-</main>
+  <div class="sparkle">
+    🌺 ✨ 🌟 ✨ 🌺
+  </div>
+
+  <div class="shrine">
+
+    <h2> 🔥🔥🔥Jai Maha Kali 🔥🔥🔥</h2>
+
+    <img
+      class="mahakali"
+      src="mahakali.gif"
+      alt="Phoenix Avalon Gold as Mahakali"
+    >
+
+    <div class="sparkle">
+      ॐ ✨ 🔱 ✨ ॐ
+    </div>
+
+    <p>
+      Welcome to my little corner of the web of fückery 
+    </p>
+
+    <p>
+      A space for Pleiadian creativity, karmic spirituality,
+      shamanic karaoke music, bizarre art and the exploration of 1 god consciousness.
+    </p>
+
+    <h2>✨ Explore ✨</h2>
+
+    <a class="link" href="shrineindex.html">
+      🔱 Enter the Healing Shrine
+    </a>
+
+    <a class="link"
+       href="https://calendly.com/phoenixavalongold/phoenix-avalon-gold-private-one-to-one-session"
+       target="_blank"
+       rel="noopener noreferrer">
+      📅 Calendar & Appointments
+    </a>
+
+    <a class="link"
+       href="https://www.youtube.com/@phoenixavalongold777"
+       target="_blank"
+       rel="noopener noreferrer">
+      🎵 Music & Meditations
+    </a>
+
+    <div class="sparkle">
+      🌟 ॐ 🌟 ॐ 🌟
+    </div>
+
+    <h2>💛 get better karma by helping a broke sister haha💛</h2>
+
+    <p>
+      Thank you for supporting independent creativity.
+      Every contribution is appreciated.
+    </p>
+
+    <a class="link"
+       href="https://wise.com/pay/me/brittneyalained"
+       target="_blank"
+       rel="noopener noreferrer">
+      💛 
+    </a>
+
+    <h3>✨ ✨</h3>
+
+    <img
+      class="qr"
+      src="8027882.jpg"
+      alt="thank you god for my cannabis fund "
+    >
+
+    <div class="sparkle">
+      🔱 ✨ ॐ ✨ 🔱
+    </div>
+
+    <p>
+      Thank you for being here. 🩷
+    </p>
+
+  </div>
+
+  <div class="sparkle">
+    🐆 ✨ ॐ 🔱 ॐ ✨ 🐆
+  </div>
+
+  <footer>
+    Made with love, chippy tea magic and cosmic mischief.
+    <br><br>
+    Phoenix Avalon Gold © 2026
+  </footer>
+
+</div>
+
 </body>
 </html>
